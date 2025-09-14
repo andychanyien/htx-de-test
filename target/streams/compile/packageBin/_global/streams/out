@@ -1,7 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/andychan/Desktop/htx-test/scala-htx/topNetl/target/scala-2.12/videoprocessingapp_2.12-0.1.jar ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	getTopN.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/andychan/Desktop/htx-test/scala-htx/topNetl/target/scala-2.12/classes/getTopN.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	getTopN$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/andychan/Desktop/htx-test/scala-htx/topNetl/target/scala-2.12/classes/getTopN$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
