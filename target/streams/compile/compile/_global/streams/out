@@ -1,0 +1,8 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/andychan/Desktop/htx-test/scala-htx/topNetl/src/main/scala/getTopN.scala:84:26: overloaded method value createDataFrame with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (rows: java.util.List[org.apache.spark.sql.Row],schema: org.apache.spark.sql.types.StructType)org.apache.spark.sql.DataFrame <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (rowRDD: org.apache.spark.api.java.JavaRDD[org.apache.spark.sql.Row],schema: org.apache.spark.sql.types.StructType)org.apache.spark.sql.DataFrame <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (rowRDD: org.apache.spark.rdd.RDD[org.apache.spark.sql.Row],schema: org.apache.spark.sql.types.StructType)org.apache.spark.sql.DataFrame[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (org.apache.spark.rdd.RDD[(String, Int, String)], schema: String)[0m
+[0m[[0m[31merror[0m] [0m[0m    val outputDF = spark.createDataFrame(joinedRDD, schema = outputSchemaJson)[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

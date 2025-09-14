@@ -1,0 +1,131 @@
+[0m[[0m[31merror[0m] [0m[0morg.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 6.0 failed 1 times, most recent failure: Lost task 0.0 in stage 6.0 (TID 6) (192.168.1.54 executor driver): org.apache.spark.SparkRuntimeException: Error while encoding: java.lang.RuntimeException: java.lang.Integer is not a valid external type for schema of bigint[0m
+[0m[[0m[31merror[0m] [0m[0mif (assertnotnull(input[0, org.apache.spark.sql.Row, true]).isNullAt) null else staticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 0, geographical_location), StringType, ObjectType(class java.lang.String)), true, false, true) AS geographical_location#18[0m
+[0m[[0m[31merror[0m] [0m[0mif (assertnotnull(input[0, org.apache.spark.sql.Row, true]).isNullAt) null else validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 1, item_rank), LongType, ObjectType(class java.lang.Long)).longValue AS item_rank#19L[0m
+[0m[[0m[31merror[0m] [0m[0mif (assertnotnull(input[0, org.apache.spark.sql.Row, true]).isNullAt) null else staticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 2, item_name), StringType, ObjectType(class java.lang.String)), true, false, true) AS item_name#20.[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.errors.QueryExecutionErrors$.expressionEncodingError(QueryExecutionErrors.scala:1415)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:211)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:194)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:140)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:104)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.Task.run(Task.scala:141)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.lang.Thread.run(Thread.java:750)[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: java.lang.RuntimeException: java.lang.Integer is not a valid external type for schema of bigint[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.If_1$(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.apply(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:208)[0m
+[0m[[0m[31merror[0m] [0m[0m	... 20 more[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mDriver stacktrace:[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Option.foreach(Option.scala:407)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: org.apache.spark.SparkRuntimeException: Error while encoding: java.lang.RuntimeException: java.lang.Integer is not a valid external type for schema of bigint[0m
+[0m[[0m[31merror[0m] [0m[0mif (assertnotnull(input[0, org.apache.spark.sql.Row, true]).isNullAt) null else staticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 0, geographical_location), StringType, ObjectType(class java.lang.String)), true, false, true) AS geographical_location#18[0m
+[0m[[0m[31merror[0m] [0m[0mif (assertnotnull(input[0, org.apache.spark.sql.Row, true]).isNullAt) null else validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 1, item_rank), LongType, ObjectType(class java.lang.Long)).longValue AS item_rank#19L[0m
+[0m[[0m[31merror[0m] [0m[0mif (assertnotnull(input[0, org.apache.spark.sql.Row, true]).isNullAt) null else staticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 2, item_name), StringType, ObjectType(class java.lang.String)), true, false, true) AS item_name#20.[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.errors.QueryExecutionErrors$.expressionEncodingError(QueryExecutionErrors.scala:1415)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:211)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:194)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:140)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:104)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.Task.run(Task.scala:141)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.lang.Thread.run(Thread.java:750)[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: java.lang.RuntimeException: java.lang.Integer is not a valid external type for schema of bigint[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.If_1$(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.apply(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:208)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:194)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:140)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:104)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.Task.run(Task.scala:141)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.lang.Thread.run(Thread.java:750)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 6.0 failed 1 times, most recent failure: Lost task 0.0 in stage 6.0 (TID 6) (192.168.1.54 executor driver): org.apache.spark.SparkRuntimeException: Error while encoding: java.lang.RuntimeException: java.lang.Integer is not a valid external type for schema of bigint[0m
+[0m[[0m[31merror[0m] [0m[0mif (assertnotnull(input[0, org.apache.spark.sql.Row, true]).isNullAt) null else staticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 0, geographical_location), StringType, ObjectType(class java.lang.String)), true, false, true) AS geographical_location#18[0m
+[0m[[0m[31merror[0m] [0m[0mif (assertnotnull(input[0, org.apache.spark.sql.Row, true]).isNullAt) null else validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 1, item_rank), LongType, ObjectType(class java.lang.Long)).longValue AS item_rank#19L[0m
+[0m[[0m[31merror[0m] [0m[0mif (assertnotnull(input[0, org.apache.spark.sql.Row, true]).isNullAt) null else staticinvoke(class org.apache.spark.unsafe.types.UTF8String, StringType, fromString, validateexternaltype(getexternalrowfield(assertnotnull(input[0, org.apache.spark.sql.Row, true]), 2, item_name), StringType, ObjectType(class java.lang.String)), true, false, true) AS item_name#20.[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.errors.QueryExecutionErrors$.expressionEncodingError(QueryExecutionErrors.scala:1415)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:211)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:194)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator$$anon$10.next(Iterator.scala:461)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.execution.WholeStageCodegenEvaluatorFactory$WholeStageCodegenPartitionEvaluator$$anon$1.hasNext(WholeStageCodegenEvaluatorFactory.scala:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:140)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.shuffle.ShuffleWriteProcessor.write(ShuffleWriteProcessor.scala:59)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:104)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.scheduler.Task.run(Task.scala:141)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.lang.Thread.run(Thread.java:750)[0m
+[0m[[0m[31merror[0m] [0m[0mCaused by: java.lang.RuntimeException: java.lang.Integer is not a valid external type for schema of bigint[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.If_1$(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$SpecificUnsafeProjection.apply(Unknown Source)[0m
+[0m[[0m[31merror[0m] [0m[0m	at org.apache.spark.sql.catalyst.encoders.ExpressionEncoder$Serializer.apply(ExpressionEncoder.scala:208)[0m
+[0m[[0m[31merror[0m] [0m[0m	... 20 more[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mDriver stacktrace:[0m

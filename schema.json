@@ -1,0 +1,28 @@
+{
+  "video_data": {
+    "type": "struct",
+    "fields": [
+      {"name": "geographical_location_oid", "type": "long", "nullable": true, "metadata": {}},
+      {"name": "video_camera_oid", "type": "long", "nullable": true, "metadata": {}},
+      {"name": "detection_oid", "type": "long", "nullable": true, "metadata": {}},
+      {"name": "item_name", "type": "string", "nullable": true, "metadata": {}},
+      {"name": "timestamp_detected", "type": "long", "nullable": true, "metadata": {}}
+    ]
+  },
+  "mapping_table": {
+    "type": "struct",
+    "fields": [
+      {"name": "geographical_location_oid", "type": "long", "nullable": true, "metadata": {}},
+      {"name": "geographical_location", "type": "string", "nullable": true, "metadata": {}}
+    ]
+  },
+  "output_data": {
+    "type": "struct",
+    "fields": [
+      {"name": "geographical_location", "type": "string", "nullable": true, "metadata": {}},
+      {"name": "item_rank", "type": "long", "nullable": true, "metadata": {}},
+      {"name": "item_name", "type": "string", "nullable": true, "metadata": {}}
+    ]
+  }
+}
+
