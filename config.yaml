@@ -1,0 +1,4 @@
+INPUT_DATA_FILEPATH : input_data/video_detections_sample.parquet
+INPUT_MAPPING_FILEPATH : input_data/singapore_road_mapping.parquet
+OUTPUT_FILEPATH : output_data
+top_N : 10

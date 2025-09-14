@@ -1,0 +1,30 @@
+# ===== Scala / sbt =====
+target/
+project/target/
+project/project/
+lib_managed/
+src_managed/
+
+# ===== Assembly / fat jar =====
+*.jar
+*.war
+*.ear
+
+# ===== IntelliJ IDEA =====
+.idea/
+*.iml
+*.iws
+out/
+
+# ===== Mac OS files =====
+.DS_Store
+
+# ===== Logs =====
+*.log
+
+# ===== Config / sensitive files =====
+# Optional: ignore your local config if it contains sensitive info
+
+# ===== Temporary files =====
+*.tmp
+*.swp
